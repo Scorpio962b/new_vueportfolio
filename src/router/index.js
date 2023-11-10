@@ -17,17 +17,18 @@ const routes = [
     component: () => import( '../views/ContactView.vue')
   },
   {
-    path: '/education',
-    component: () => import( '../views/EducationView.vue')
-  },
-  {
-    path: '/skills',
-    component: () => import( '../views/SkillsView.vue')
+    path: '/resume',
+    component: () => import( '../views/resumeView.vue')
   },
   {
     path: '/testimonials',
     component: () => import( '../views/TestimonialsView.vue')
   },
+  {
+    path: '/projects',
+    component: () => import( '../views/ProjectsView.vue')
+  },
+  
 ]
 
 const router = createRouter({

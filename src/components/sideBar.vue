@@ -12,7 +12,7 @@
           tag="button"
           class="button-side"
         >
-          <div class="link-container">home</div>
+          <div class="link-container">Home</div>
         </router-link>
         <router-link
           to="/about"
@@ -20,7 +20,7 @@
           tag="button"
           class="button-side"
         >
-          <div class="link-container">about</div>
+          <div class="link-container">About</div>
         </router-link>
         <router-link
           to="/contact"
@@ -28,31 +28,32 @@
           tag="button"
           class="button-side"
         >
-          <div class="link-container">contact</div>
+          <div class="link-container">Contact</div>
         </router-link>
         <router-link
-          to="/education"
+          to="/resume"
           active-class="active"
           tag="button"
           class="button-side"
         >
-          <div class="link-container">education</div>
+          <div class="link-container">Resume</div>
         </router-link>
-        <router-link
-          to="/skills"
-          active-class="active"
-          tag="button"
-          class="button-side"
-        >
-          <div class="link-container">skills</div>
-        </router-link>
+       
         <router-link
           to="/testimonials"
           active-class="active"
           tag="button"
           class="button-side"
         >
-          <div class="link-container">testimonials</div>
+          <div class="link-container">Testimonials</div>
+        </router-link>
+        <router-link
+          to="/Project"
+          active-class="active"
+          tag="button"
+          class="button-side"
+        >
+          <div class="link-container">Projects</div>
         </router-link>
         </div>
       </nav>
@@ -126,7 +127,7 @@ export default {
   color: white;
 }
 .sidebar {
-  background-color: goldenrod;
+  background-color: #ffd700;
 }
 
 </style>
