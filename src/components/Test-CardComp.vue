@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <!-- <div class="container">
         <div class="card" v-for="testimonial in testimonials" :key="testimonial.id">
             <div class="card-body">
               <img :src="testimonial.image_url" :alt="testimonial.name">
@@ -7,7 +7,15 @@
               <p>{{ testimonial.desc }}</p>
             </div>
         </div>
-    </div>
+    </div> -->
+    <div class="container">
+	<div class="box box-1" style="--img: url(https://i.postimg.cc/sgBkfbtx/img-1.jpg);" data-text="Renji"></div>
+	<div class="box box-2" style="--img: url(https://i.postimg.cc/3RZ6bhDS/img-2.jpg);" data-text="Sora"></div>
+	<div class="box box-3" style="--img: url(https://i.postimg.cc/DZhHg0m4/img-3.jpg
+);" data-text="Kaito"></div>
+	<div class="box box-4" style="--img: url(https://i.postimg.cc/KjqWx5ft/img-4.jpg);" data-text="Tsuki"></div>
+	<div class="box box-5" style="--img: url(https://i.postimg.cc/nrcWyW4H/img-5.jpg);" data-text="Mitsui"></div>
+</div>
 </template>
 <script>
 
@@ -17,22 +25,99 @@ export default {
 </script>
 
 <style scoped>
- .container{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  
+@import url("https://fonts.googleapis.com/css2?family=Figtree&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Figtree", sans-serif;
 }
-.card{
-  width: 22rem;
-  height: 770px;
-  margin-bottom:20px ;
+
+body {
+	display: grid;
+	place-content: center;
+	min-height: 100vh;
+	background: #000;
 }
-.card img{
-  width: 100%;
-  height: 50%;
+
+.container {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+	gap: 1em;
+	width: 800px;
+	height: 500px;
+	transition: all 400ms;
 }
-@media(max-width:992px){
+
+.container:hover .box {
+	filter: grayscale(100%) opacity(24%);
+}
+
+.box {
+	position: relative;
+	background: var(--img) center center;
+	background-size: cover;
+	transition: all 400ms;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container .box:hover {
+	filter: grayscale(0%) opacity(100%);
+}
+
+.container:has(.box-1:hover) {
+	grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-2:hover) {
+	grid-template-columns: 1fr 3fr 1fr 1fr 1fr;
+}
+
+.container:has(.box-3:hover) {
+	grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
+}
+
+.container:has(.box-4:hover) {
+	grid-template-columns: 1fr 1fr 1fr 3fr 1fr;
+}
+
+.container:has(.box-5:hover) {
+	grid-template-columns: 1fr 1fr 1fr 1fr 3fr;
+}
+
+.box:nth-child(odd) {
+	transform: translateY(-16px);
+}
+
+.box:nth-child(even) {
+	transform: translateY(16px);
+}
+
+.box::after {
+	content: attr(data-text);
+	position: absolute;
+	bottom: 20px;
+	background: #000;
+	color: #fff;
+	padding: 10px 10px 10px 14px;
+	letter-spacing: 4px;
+	text-transform: uppercase;
+	transform: translateY(60px);
+	opacity: 0;
+	transition: all 400ms;
+}
+
+.box:hover::after {
+	transform: translateY(0);
+	opacity: 1;
+	transition-delay: 400ms;
+}
+
+/* @media(max-width:992px){
   .container {
   display: flex;
   flex-wrap: wrap;
@@ -72,6 +157,6 @@ export default {
 }
 .card img {
   width: 100%;
-}
-}
+} */
+/* } */
 </style>
