@@ -20,6 +20,8 @@ export default {
 .container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   justify-content: space-between;
 }
 .card {
@@ -50,7 +52,7 @@ export default {
   justify-content: space-between;
 }
   .card {
-  width: 10rem;
+  width: 20rem;
   margin-bottom: 20px;
 }
 .card img {

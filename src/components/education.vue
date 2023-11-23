@@ -1,6 +1,5 @@
 <template>
-  <h3>Education
-    :</h3>
+  <h3>Education:</h3>
     <div class="container">
       <div class="row">
         <div class="col" v-for="education in educations" :key="education.id">

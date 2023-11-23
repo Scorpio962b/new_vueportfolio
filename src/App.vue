@@ -34,7 +34,7 @@ export default {
 }
 #side {
   background-color: goldenrod;
-  z-index: 1;
+
 }
 body {
   margin: 0px;
